@@ -1,8 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
-const ColorDisplay = ({ rgbValue }) => {
+const ColorDisplay = () => {
+  const rgbValue = useSelector((state) => state);
   const { red, blue, green } = rgbValue;
-  console.log(red, blue, green);
+  console.log(rgbValue);
   const style = {
     height: "200px",
     width: "200px",
